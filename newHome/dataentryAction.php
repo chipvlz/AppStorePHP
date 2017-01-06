@@ -1,0 +1,23 @@
+<?php
+include_once "../dbhelper.php";
+
+	$name = $_POST['name'];
+	$image = $_POST['image'];
+	$download = $_POST['download'];
+	$rating = $_POST['rating'];
+	$type = $_POST['type'];
+	$company = $_POST['company'];
+	$os = $_POST['os'];
+	$price = $_POST['price'];
+	$downloads = $_POST['downlaods'];
+	$description = $_POST['description'];
+	
+	echo $name . " " . $image . " " . $download . " " . $rating . " " . $type . " " . $company . " " . $os . " " . $price;
+
+	$db->insertAppInfo($name,$image,$download,$rating,$type,$company,$os,$price,$downloads,$description);
+	
+
+$db->boo();
+?>
+
+<a href="edit_admin.php">Go back</a>
